@@ -1,6 +1,6 @@
 import nbformat
 
-path = "Image_Dataset_Curation_with_Foundation_and_Specialist_Models_MNIST_CLIP_vs_LeNet5.ipynb"
+path = "MNIST_Curated_LeNet_with_idk_labels.ipynb"
 
 nb = nbformat.read(path, as_version=4)
 
