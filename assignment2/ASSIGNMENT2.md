@@ -260,6 +260,7 @@ Write an analysis (200-300 words) covering:
 ## Task 5: CILP Assessment Performance (15 points)
 ### Objective
 Complete the CILP model training and achieve the required performance thresholds.
+
 ### Requirements
 #### 5.1 Contrastive Pretraining (7 points)
 Train the CILP model to achieve:
