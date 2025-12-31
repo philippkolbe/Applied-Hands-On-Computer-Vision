@@ -197,26 +197,23 @@ Implement all three methods for combining feature maps:
 | Training Time (seconds/epoch) |  |  |  |  |
 | GPU Memory (MB) |  |  |  |  |
 
+- Written analysis of results (200-400 words)
+
 ### Task 4: Strided Convolution Ablation (20 points)
 
-| Criterion | Points | Requirements |
-|---|---:|---|
-| Implementation | 8 | Correct EmbedderStrided class |
-| Comparison | 6 | Complete metrics table for both variants |
-| Analysis | 6 | Written analysis with justification |
+#### Objective
+Replace MaxPool2d layers with stride-2 convolutions and analyze the impact. Note that we will use the same fusion models as in task 3. Create two versions of that architecture (MaxPool2d vs Strided Conv) and compare them.
 
-Written analysis of results (200-400 words)
+#### Background
+The original Embedder architecture uses MaxPool2d for spatial downsampling:
 
-#### Requirements
-### Required Artifacts
+```python
+nn.Conv2d(in_ch, 50, kernel_size=3, padding=1),
 
-| Artifact | Location | Format |
-|---|---|---|
-| W&B project link | README.md | URL |
-| FiftyOne screenshots | results/ | PNG |
-| Comparison tables | Notebooks | Markdown |
-| Model checkpoints | checkpoints/ | .pt files |
-| Final metrics summary | README.md | Markdown table |
+nn.ReLU(),
+
+nn.MaxPool2d(2),  # Replace this
+```
 
 #### 4.1 Strided Convolution Implementation (8 points)
 Replace each MaxPool2d with a stride-2 convolution:
@@ -254,7 +251,7 @@ Write an analysis (200-300 words) covering:
 - Impact on gradient flow and learned features
 - Recommendation with justification
 
-#### Deliverables
+##### Deliverables
 - EmbedderStrided class implementation
 - Side-by-side training results logged to W&B
 - Comparison table and written analysis
