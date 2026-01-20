@@ -8,3 +8,8 @@ The first assignment focuses on MNIST curation with FiftyOne and training a clas
 This assessment extends the NVIDIA DLI Multimodality Workshop.
 
 Refer to the [ASSIGNMENT2.md](assignment2/ASSIGNMENT2.md) file.
+
+## Assignment 3
+This assignment builds upon the NVIDIA Diffusion Models Workshop.
+
+Refer to the [ASSIGNMENT3.md](assignment3/ASSIGNMENT3.md) file.
